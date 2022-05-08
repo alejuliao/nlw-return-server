@@ -32,7 +32,7 @@ export class SubmitFeedbackUseCase {
       body: [
         `<p>Tipo de feedback: ${type}</p>`,
         `<p>Commentario: ${comment}</p>`,
-        ``
+        screenshot ? `<img src="${screenshot}"/>` : null
       ].join('\n')
     })
   }
